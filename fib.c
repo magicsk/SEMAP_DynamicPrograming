@@ -6,11 +6,8 @@
 #include <stdio.h>
 
 long fib(long n) {
-     if (n < 2) return n;
-     long x, y;
-     x = fib(n - 1);
-     y = fib(n - 2);
-     return x + y; 
+    if (n <= 2) return 1;
+    return fib(n - 1) + fib(n - 2);
 }
 
 int main() {
